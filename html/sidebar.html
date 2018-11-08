@@ -265,7 +265,7 @@
         switch (staticFileSetting.source) {
 
             case 'github': // 注意：此处为GitHub加载源，如果需要加载自己分支的代码，修改此处URL，URL规则详见：https://www.jsdelivr.com/
-                return 'https://cdn.jsdelivr.net/gh/BNDong/Cnblogs-Theme-SimpleMemory@'+staticFileSetting.versions+'/' + (file ? file : '');
+                return 'https://github.com/tt19700818/Cnblogs-Theme-SimpleMemory@'+staticFileSetting.versions+'/' + (file ? file : '');
                 break;
 
             case 'cnblogs': // 注意：此处为博客园加载源，加载本人博客文件为老版本。本人博客园文件停止更新，如果需要可以修改至自己博客园文件
