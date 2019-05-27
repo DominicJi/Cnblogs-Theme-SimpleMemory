@@ -577,8 +577,7 @@ function Base() {
         pvHtml += '<span id="amazingStatSpan"></span>';
         pvHtml += '<div>【'+window.cnblogsConfig.bottomText.left+'<span id="footerTextIcon">❤️</span>'+window.cnblogsConfig.bottomText.right+'】</div>';
         pvHtml += "<div><span id='blogRunTimeSpan'></span><span class='my-face'>ღゝ◡╹)ノ♡</span></div>";
-        pvHtml += '<div id="blogrollInfo"></div>';
-        pvHtml += '<div id="cnzzInfo"></div>';
+        
         $('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
 
         if (window.location.href.search("www.cnblogs.com/bndong") == -1 ) {
