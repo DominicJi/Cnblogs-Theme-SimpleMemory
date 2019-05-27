@@ -580,9 +580,7 @@ function Base() {
         
         $('#footer').append(pvHtml).prepend('<div class="footer-image"></div>');
 
-        if (window.location.href.search("www.cnblogs.com/bndong") == -1 ) {
-            setTheme();
-        }
+        
 
         window.setInterval( setRunTime, 500 );
         setBlogroll();
