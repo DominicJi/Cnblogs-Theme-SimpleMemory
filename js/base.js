@@ -492,22 +492,24 @@ function Base() {
      * 屏幕大小变化处理
      */
     this.resizeMonitor = function() {
-        var bodyWidth = parseFloat(document.body.clientWidth);
-        bndongJs.setDomHomePosition();
+        var bodyWidth = parseFloat(document.body.clientWidth); // 1309
+        caihuaJs.setDomHomePosition();
 
         // 设置目录插件左右位置
         if ($('#sideToolbar').length > 0) {
-            var mainContentWidth = $('#mainContent').outerWidth(true);
-            var listWidth        = $('#sideCatalog').outerWidth(true);
-            listWidth = listWidth > 220 ? listWidth : 242;
-            var bothWidth        = (bodyWidth - mainContentWidth) / 2;
-            var rightPx          = bothWidth - listWidth - 50;
+            var mainContentWidth = $('#mainContent').outerWidth(true); // 840
+            var listWidth        = $('#sideCatalog').outerWidth(true); // 230
+            listWidth = listWidth > 220 ? listWidth : 242; // 230
+            var bothWidth        = (bodyWidth - mainContentWidth) / 2; // 234.2
+            var rightPx          = bothWidth - listWidth - 50; // 11.2
 
             $('#sideCatalog').css('right', (rightPx > 0 ? rightPx : 0) + 'px');
+            // if (bothWidth > listWidth  && bodyWidth > 1230) {
             if (bothWidth > listWidth + 50 && bodyWidth > 1230) {
                 $('#sideToolbar').css('visibility', 'visible');
             } else {
-                $('#sideToolbar').css('visibility', 'hidden');
+                // $('#sideToolbar').css('visibility', 'hidden');
+                $('#sideToolbar').css('visibility', 'visible');
             }
         }
     };
